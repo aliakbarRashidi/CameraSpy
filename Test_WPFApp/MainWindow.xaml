@@ -1,0 +1,29 @@
+﻿<Window x:Class="IPLocator_GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+        xmlns:local="clr-namespace:IPLocator_GUI"
+        mc:Ignorable="d"
+        Title="CameraSpy" 
+        Height="384"
+        Width="512"
+        WindowStartupLocation="CenterScreen" 
+        Name="HomeWindow">
+    <Grid >
+        <DockPanel LastChildFill="True">
+            <StatusBar DockPanel.Dock="Bottom" Name="MainStatusBar">
+                <StatusBarItem Content="Initializing... " Name="CurrentStatus" />
+            </StatusBar>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="58*"/>
+                    <RowDefinition Height="447*"/>
+                </Grid.RowDefinitions>
+                <m:Map CredentialsProvider="6TC6uswwBMoxNlgJBXdU~lMNVnREdq3rExIVk60Ra0g~AmmoUnnxzI7P_utobnDk4KdMjkOpT5N95x7RNUy55XYMoYnPbE1Rv15sIfO9bdIL" x:Name="MainMap" Grid.RowSpan="2"/>
+            </Grid>
+        </DockPanel>
+    </Grid>
+
+</Window>
