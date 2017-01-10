@@ -12,7 +12,7 @@ This application leverages the IP6.LITE CSV available from [lite.ip2location.com
 ## Installation
 
 ### Installation Package
-*Coming soon!*
+There is an MSI installer package available for download [at this link](http://www.dotheneedful.co/download-files/CameraSpy_Setup.msi)
 
 ### From Source
 #### Dependencies
