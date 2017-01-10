@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Windows;
-using System.Threading;
 using System.Windows.Controls;
 using Microsoft.Maps.MapControl.WPF;
 
 using System.Collections.Concurrent;
-using System.Windows.Input;
 using System.Diagnostics;
 
 namespace IPLocator_GUI
@@ -19,6 +17,14 @@ namespace IPLocator_GUI
         private delegate void PushpinCreator(AddressLocator.ClientInfoObject client);
 
         private ConcurrentQueue<AddressLocator.ClientInfoObject> PendingPushpinQueue;
+
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+
+            // Since all IO is incremental and nothing is writing, sudden shutdowns won't break anything
+            Environment.Exit(0);
+        }
 
         private void UpdateStatus(String message)
         {
